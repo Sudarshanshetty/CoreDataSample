@@ -107,10 +107,10 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         
-        Clubs  *theclub= (Clubs*)[mPlayerlistArray objectAtIndex:indexPath.row];
+        Players  *theplayer= (Players*)[mPlayerlistArray objectAtIndex:indexPath.row];
         AppDelegate *appdelgate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
         
-        [appdelgate.managedObjectContext deleteObject:theclub];
+        [appdelgate.managedObjectContext deleteObject:theplayer];
         [mPlayerlistArray removeObjectAtIndex:indexPath.row];
        
         NSError *err=nil;
